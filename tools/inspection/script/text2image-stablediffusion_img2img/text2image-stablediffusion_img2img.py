@@ -1,9 +1,11 @@
+import os.path
 import sys
 
 import requests
-
-api_key = sys.argv[1]  # 如果没有api_key这里会传个none字符串
-base_url = sys.argv[2]
+#
+# api_key = sys.argv[1]  # 如果没有api_key这里会传个none字符串
+# base_url = sys.argv[2]
+base_url = "http://62.234.222.30:31020"
 # 如果配置了多个base_url，多个base_url会以逗号分割
 # base_url_arr = sys.argv[2].split(',')
 
@@ -21,9 +23,11 @@ payload = {'prompt': 'gray puppy',
            'scheduler': '',
            'vae': '',
            'guidance_scale': '5'}
+cur_path = os.path.dirname(os.path.abspath(__file__))
+file_path = os.path.join(cur_path, 'img2img_test.png')
 files = [
 	('file', ('0adf68f82134a99c3148e1373bbe99d4 (1) (1).jpg',
-	          open('img2img_test.png', 'rb'), 'image/png'))
+	          open(file_path, 'rb'), 'image/png'))
 ]
 headers = {}
 
