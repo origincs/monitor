@@ -23,7 +23,7 @@ payload = {'prompt': 'gray puppy',
            'guidance_scale': '5'}
 files = [
 	('file', ('0adf68f82134a99c3148e1373bbe99d4 (1) (1).jpg',
-	          open('../img2img_test.png', 'rb'), 'image/png'))
+	          open('img2img_test.png', 'rb'), 'image/png'))
 ]
 headers = {}
 
